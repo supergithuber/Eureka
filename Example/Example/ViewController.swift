@@ -1139,6 +1139,31 @@ class InlineRowsController: FormViewController {
                     }
                     row.value = row.options[0]
                 }
+            <<< TwoComponentsPickerInlineRow<String>("TwoComponents"){(row : TwoComponentsPickerInlineRow<String>) -> Void in
+                row.title = row.tag
+                row.displayValueFor = {(rowValue:String?) in
+                    if let value = row.inlineRow?.secondValue{
+                        return row.value! + value as String
+                    }else
+                    {
+                        //for initial value
+                        return (row.value!) + row.secondValue! as String
+                    }
+                    
+                }
+                row.options = ["a", "b", "c"]
+                row.secondOptions = ["d", "e", "f", "g"]
+
+                row.value = row.options[0]
+                row.inlineRow?.secondValue = row.secondOptions[0]
+                //for initial value
+                row.secondValue = row.secondOptions[0]
+                }.onExpandInlineRow({ (cell, row, inlineRow) in
+                    row.onCollapseInlineRow({ (cell, row, inlineRow) in
+                        print("更新后的第一个值\(String(describing: row.value))")
+                        print("更新后的第二个值\(String(describing: inlineRow.secondValue))")
+                    })
+                })
     }
 }
 

@@ -86,6 +86,8 @@
 		8690E4BE1CFDE062004CDB1C /* Eureka.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8690E4BD1CFDE062004CDB1C /* Eureka.bundle */; };
 		B257FE2E1EC0F66900043911 /* RowsInsertionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257FE2D1EC0F66900043911 /* RowsInsertionTests.swift */; };
 		B2A401161EC0BA140042EDF0 /* SectionsInsertionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A401151EC0BA140042EDF0 /* SectionsInsertionTests.swift */; };
+		CCB4C5491F246A7C0075A404 /* TwoComponentsPickerInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB4C5481F246A7C0075A404 /* TwoComponentsPickerInlineRow.swift */; };
+		CCB4C54B1F246A9F0075A404 /* TwoComponentsPickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB4C54A1F246A9F0075A404 /* TwoComponentsPickerRow.swift */; };
 		FA56B6AF1DBAD38900407C94 /* RuleEqualsToRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA56B6AE1DBAD38900407C94 /* RuleEqualsToRow.swift */; };
 /* End PBXBuildFile section */
 
@@ -182,6 +184,8 @@
 		8690E4BD1CFDE062004CDB1C /* Eureka.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Eureka.bundle; sourceTree = "<group>"; };
 		B257FE2D1EC0F66900043911 /* RowsInsertionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RowsInsertionTests.swift; path = Tests/RowsInsertionTests.swift; sourceTree = SOURCE_ROOT; };
 		B2A401151EC0BA140042EDF0 /* SectionsInsertionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SectionsInsertionTests.swift; path = Tests/SectionsInsertionTests.swift; sourceTree = SOURCE_ROOT; };
+		CCB4C5481F246A7C0075A404 /* TwoComponentsPickerInlineRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoComponentsPickerInlineRow.swift; sourceTree = "<group>"; };
+		CCB4C54A1F246A9F0075A404 /* TwoComponentsPickerRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoComponentsPickerRow.swift; sourceTree = "<group>"; };
 		FA56B6AE1DBAD38900407C94 /* RuleEqualsToRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RuleEqualsToRow.swift; path = Source/Validations/RuleEqualsToRow.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -234,23 +238,23 @@
 		2859CD971C7CF2020002982F /* Rows */ = {
 			isa = PBXGroup;
 			children = (
-				2859CE1A1C7E04250002982F /* SelectableRows */,
-				2859CE0F1C7E01C70002982F /* Controllers */,
 				2859CDB21C7D0E210002982F /* Common */,
+				2859CE0F1C7E01C70002982F /* Controllers */,
+				2859CE1A1C7E04250002982F /* SelectableRows */,
 				2859CDAE1C7D0D990002982F /* ActionSheetRow.swift */,
 				2859CDB01C7D0E010002982F /* AlertRow.swift */,
 				2859CDA21C7CF4050002982F /* ButtonRow.swift */,
 				2859CD991C7CF2020002982F /* ButtonRowWithPresent.swift */,
 				2859CDA41C7CF51A0002982F /* CheckRow.swift */,
-				2859CDFE1C7DF9A70002982F /* DateRow.swift */,
 				2859CDF41C7DF2740002982F /* DateInlineRow.swift */,
 				2859CDFC1C7DF9430002982F /* DatePickerRow.swift */,
+				2859CDFE1C7DF9A70002982F /* DateRow.swift */,
 				2859CE061C7DFBFA0002982F /* FieldsRow.swift */,
 				2859CDA01C7CF3A10002982F /* LabelRow.swift */,
 				2859CE1F1C7E092B0002982F /* MultipleSelectorRow.swift */,
-				2859CDB51C7D0EC60002982F /* PickerRow.swift */,
-				397300091DF0E2A000080E4D /* PickerInputRow.swift */,
 				2859CDB71C7D0FE70002982F /* PickerInlineRow.swift */,
+				397300091DF0E2A000080E4D /* PickerInputRow.swift */,
+				2859CDB51C7D0EC60002982F /* PickerRow.swift */,
 				2859CE1D1C7E08300002982F /* PopoverSelectorRow.swift */,
 				2859CDEC1C7DF0680002982F /* PushRow.swift */,
 				2859CDA81C7D0B3C0002982F /* SegmentedRow.swift */,
@@ -258,6 +262,8 @@
 				49ADC7F81C8A83240073952B /* StepperRow.swift */,
 				2859CDA61C7CF5530002982F /* SwitchRow.swift */,
 				2859CDAC1C7D0BCA0002982F /* TextAreaRow.swift */,
+				CCB4C5481F246A7C0075A404 /* TwoComponentsPickerInlineRow.swift */,
+				CCB4C54A1F246A9F0075A404 /* TwoComponentsPickerRow.swift */,
 			);
 			name = Rows;
 			path = Source/Rows;
@@ -440,7 +446,7 @@
 				TargetAttributes = {
 					51729DEA1B9A4F5E004A00EB = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					51729DF41B9A4F5E004A00EB = {
@@ -526,6 +532,7 @@
 				28EEBFF21C7E23FA00300699 /* RowType.swift in Sources */,
 				287E7D801D74E42D0065F4DE /* RuleRegExp.swift in Sources */,
 				28EEC0101C7E399500300699 /* DateInlineFieldRow.swift in Sources */,
+				CCB4C54B1F246A9F0075A404 /* TwoComponentsPickerRow.swift in Sources */,
 				2859CDC61C7D1A2E0002982F /* NavigationAccessoryView.swift in Sources */,
 				49ADC7F91C8A83240073952B /* StepperRow.swift in Sources */,
 				28EE46AC1C7F712300EFF4A2 /* DateInlineRow.swift in Sources */,
@@ -542,6 +549,7 @@
 				28EE46A81C7F5D5200EFF4A2 /* SelectableSection.swift in Sources */,
 				28EEBFF61C7E240B00300699 /* InlineRowType.swift in Sources */,
 				287E7D841D75F9C80065F4DE /* RuleEmail.swift in Sources */,
+				CCB4C5491F246A7C0075A404 /* TwoComponentsPickerInlineRow.swift in Sources */,
 				28EEBFFB1C7E25C500300699 /* Operators.swift in Sources */,
 				28DB37301CE4F864009E46BA /* Protocols.swift in Sources */,
 				2859CDC01C7D138D0002982F /* Section.swift in Sources */,
